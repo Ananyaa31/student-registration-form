@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="intro">
+        <p class="eyebrow">STUDENT PORTAL</p>
+        <h1>Create your account</h1>
+        <p>Fill in your details to register for a course.</p>
+      </div>
+
+      <form id="registrationForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="e.g. Ananya Sharma" autocomplete="name" required>
+          <small class="error" id="fullNameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="mobile">Mobile number</label>
+          <input id="mobile" name="mobile" type="tel" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel" required>
+          <small class="error" id="mobileError"></small>
+        </div>
+
+        <div class="field">
+          <label for="course">Choose a course</label>
+          <select id="course" name="course" required>
+            <option value="">Select your course</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+          </select>
+          <small class="error" id="courseError"></small>
+        </div>
+
+        <fieldset class="field gender-field">
+          <legend>Gender</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+          </div>
+          <small class="error" id="genderError"></small>
+        </fieldset>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" required>
+          <small class="error" id="passwordError"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Type your password again" autocomplete="new-password" required>
+          <small class="error" id="confirmPasswordError"></small>
+        </div>
+
+        <button type="submit">Register now</button>
+        <p id="successMessage" class="success" role="status" aria-live="polite"></p>
+        <p class="note">Demo form only: your details are not sent or saved.</p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
